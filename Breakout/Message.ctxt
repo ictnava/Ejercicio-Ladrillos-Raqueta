@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Message
+comment0.text=\r\n\ The\ message\ class\ holds\ a\ text\ message\ \r\n\ \r\n\ @author\ Barbara\ Ericson,\ Georgia\ Tech\r\n\ @version\ 1.0,\ April\ 6,\ 2007\r\n
+comment1.params=theText
+comment1.target=Message(java.lang.String)
+comment1.text=\ \r\n\ Constructor\ that\ takes\ the\ text\ to\ display\r\n
+comment2.params=theText\ theWidth\ theHeight
+comment2.target=Message(java.lang.String,\ int,\ int)
+comment2.text=\r\n\ Constructor\ that\ takes\ the\ text\ to\ display,\ the\ width,\r\n\ and\ the\ height\r\n\ @param\ theText\ \ \ the\ text\ to\ use\r\n\ @param\ theWidth\ \ the\ width\ to\ use\r\n\ @param\ theHeight\ the\ height\ to\ use\r\n
+comment3.params=theText
+comment3.target=void\ setText(java.lang.String)
+comment3.text=\r\n\ Method\ to\ change\ the\ text\ in\ this\ message\r\n\ @param\ theText\ the\ new\ text\ to\ usee\r\n
+comment4.params=
+comment4.target=void\ act()
+comment4.text=\ \r\n\ Messages\ don't\ do\ anything\ when\ asked\ to\ act\r\n
+comment5.params=
+comment5.target=void\ updateImage()
+comment5.text=\r\n\ Method\ to\ create\ and\ set\ the\ image\ for\ this\ message\r\n\ Invoke\ this\ method\ when\ the\ text\ changes,\ the\ width\ changes,\ and/or\r\n\ the\ height\ changes\r\n
+numComments=6

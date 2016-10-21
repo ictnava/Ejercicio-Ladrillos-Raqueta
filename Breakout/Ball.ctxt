@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Ball
+comment0.text=\r\n\ A\ ball\ is\ an\ object\ that\ can\ hit\ other\ objects\ and\ bounce\ off\ the\ \r\n\ edges\ of\ the\ world\ (except\ the\ bottom\ edge).\ \ It\ will\ bounce\ off\ of\r\n\ a\ paddle\ as\ well.\r\n\ \r\n\ @author\ Barbara\ Ericson\ Georgia\ Tech\ \r\n\ @version\ 1.0\ April\ 6,\ 2007\r\n
+comment1.params=
+comment1.target=Ball()
+comment1.text=\r\n\ Constructor\ that\ takes\ no\ arguments\ \r\n
+comment2.params=theRadius\ theColor\ theVelX\ theVelY
+comment2.target=Ball(int,\ java.awt.Color,\ int,\ int)
+comment2.text=\r\n\ Constructor\ that\ takes\ initial\ values\ for\ all\ fields\r\n\ @param\ theRadius\ the\ radius\ to\ use\r\n\ @param\ theColor\ \ the\ color\ to\ use\r\n\ @param\ theVelX\ \ \ the\ amount\ to\ change\ in\ X\ per\ act\r\n\ @param\ theVelY\ \ \ the\ amount\ to\ change\ in\ Y\ per\ act\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Balls\ will\ move\ and\ check\ if\ they\ have\ hit\ a\ brick\ or\ paddle\ or\r\n\ one\ of\ the\ edges\ of\ the\ world\r\n
+comment4.params=theColor
+comment4.target=void\ setColor(java.awt.Color)
+comment4.text=\r\n\ Method\ to\ set\ the\ ball\ color\r\n
+comment5.params=
+comment5.target=void\ updateImage()
+comment5.text=\r\n\ Method\ to\ create\ the\ image\ and\ set\ it\ for\ the\ ball\ \r\n\ If\ you\ change\ the\ ball\ width\ or\ color\ you\ should\ \r\n\ invoke\ this\ again\r\n
+comment6.params=
+comment6.target=void\ rebota()
+comment7.params=
+comment7.target=void\ cambiaColor()
+numComments=8

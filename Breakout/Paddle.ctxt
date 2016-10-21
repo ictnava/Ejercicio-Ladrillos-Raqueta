@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Paddle
+comment0.text=\r\n\ A\ paddle\ is\ a\ rectangular\ object\ that\ can\ be\ moved\ via\ the\ left\r\n\ and\ right\ arrow\ keys.\ \ \r\n\ \r\n\ @author\ Barbara\ Ericson,\ Georgia\ Tech\r\n\ @version\ 1.0\ April\ 6,\ 2007\r\n
+comment1.params=
+comment1.target=Paddle()
+comment1.text=\r\n\ No\ argument\ constructor\ \r\n
+comment2.params=theWidth\ theHeight\ theColor\ theAmount
+comment2.target=Paddle(int,\ int,\ java.awt.Color,\ int)
+comment2.text=\r\n\ Constructor\ that\ takes\ the\ width,\ height,\ color,\ and\ moveAmount\r\n\ @param\ theWidth\ the\ width\ to\ use\r\n\ @param\ theHeight\ the\ height\ to\ use\r\n\ @param\ theColor\ the\ color\ to\ use\r\n\ @param\ theAmount\ the\ number\ of\ cells\ (pixels)\ to\ move\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ a\ paddle\ will\ move\ in\ reaction\ to\ a\ left\ or\ right\r\n\ arrow\ key\ being\ pressed\r\n
+comment4.params=
+comment4.target=void\ muevete()
+comment5.params=
+comment5.target=void\ updateImage()
+comment5.text=\r\n\ Method\ to\ create\ and\ set\ the\ image\ for\ this\ paddle.\ \ Invoke\r\n\ this\ method\ again\ when\ the\ width,\ height,\ or\ color\ change.\r\n
+numComments=6
