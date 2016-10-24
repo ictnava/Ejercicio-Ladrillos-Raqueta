@@ -41,7 +41,7 @@ public class BreakoutWorld extends World
    public static final Color[] colorArray = {Color.RED, Color.RED,
       Color.ORANGE, Color.ORANGE, Color.GREEN,Color.GREEN,
       Color.YELLOW,Color.YELLOW,  Color.CYAN, Color.CYAN};
-      
+          
    ////////////////// instance fields ///////////////////////////////
   
    /** the number of balls created in the game so far */
@@ -49,7 +49,8 @@ public class BreakoutWorld extends World
   
    /** a message displayed for the user */
    private Message message = null;
-  
+   //Contador para las vidas
+   private Counter contVidas;
    //////////// constructors /////////////
   
    /**
@@ -58,6 +59,8 @@ public class BreakoutWorld extends World
    public BreakoutWorld()
    {
         super (WIDTH, HEIGHT, RESOLUTION,false);
+        addObject(contVidas=new Counter("Vidas: "),350,20);
+        contVidas.setValue(3);
         setUpBreakout();
    }
   
@@ -68,7 +71,10 @@ public class BreakoutWorld extends World
     * @return the number of balls created in the game 
     */
    public int getNumBalls() { return numBalls; }
-  
+   
+   public void decrementaVida(){
+      contVidas.add(-1);    
+   }
    /**
     * Method to add a new ball
     */
@@ -86,6 +92,7 @@ public class BreakoutWorld extends World
       /* create new ball and tell the user the number of balls created */
       else
       { 
+          
          addObject(new Ball(), (WIDTH / 2), 222);
          message.setText("Ball " + numBalls);
       }
@@ -168,6 +175,14 @@ public class BreakoutWorld extends World
     public int getHeight()
     {
         return HEIGHT;
+    }
+    
+   public void pierde(){
+       if(contVidas.getValue()==0){
+           Label etiquetaFin=new Label("Game Over",50);
+          addObject(etiquetaFin,250,250);
+          Greenfoot.stop();
+        }
     }
 }
 

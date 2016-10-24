@@ -117,7 +117,9 @@ public class Ball extends Actor
           mundo.checkIfWon();
         }
         if(this.getY()>mundo.getHeight()){
-            mundo.newBall();
+            mundo.decrementaVida();
+            setLocation(mundo.getWidth()/2,222);
+            mundo.pierde();
         }
     }
         
