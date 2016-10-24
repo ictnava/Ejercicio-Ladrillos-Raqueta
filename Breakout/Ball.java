@@ -89,7 +89,7 @@ public class Ball extends Actor
     public void updateImage()
     {
         GreenfootImage image = new GreenfootImage(width,width);
-        image.setColor(color);
+        //image.setColor(color);
         image.fillOval(0,0,width,width);
         setImage(image);
     }
@@ -99,6 +99,7 @@ public class Ball extends Actor
         BreakoutWorld mundo=(BreakoutWorld)getWorld();
         setLocation(getX()+velX,getY()+velY);
         move(velX);
+        
         if(this.getX()+radius<mundo.getWidth()){
            velX=-velX;
         }
@@ -117,12 +118,14 @@ public class Ball extends Actor
           mundo.checkIfWon();
         }
         if(this.getY()>mundo.getHeight()){
-            mundo.decrementaVida();
-            setLocation(mundo.getWidth()/2,222);
-            mundo.pierde();
+          mundo.decrementaVida();
+          setLocation(mundo.getWidth()/2,222);
+          try {
+           Thread.sleep(500);
+             } catch (InterruptedException ex) {
+          }
+          mundo.pierde();
         }
-    }
-        
-    
+    } 
 }
 

@@ -51,6 +51,7 @@ public class BreakoutWorld extends World
    private Message message = null;
    //Contador para las vidas
    private Counter contVidas;
+   
    //////////// constructors /////////////
   
    /**
@@ -75,29 +76,11 @@ public class BreakoutWorld extends World
    public void decrementaVida(){
       contVidas.add(-1);    
    }
+   
    /**
     * Method to add a new ball
     */
-   public void newBall() 
-   {
-       /* increment the number of balls created */
-      numBalls++;
-      
-      /* check if used 3 or more */
-      if (numBalls > 3)
-      {
-          message.setText("Game over and you lost.");
-          Greenfoot.stop();
-      }
-      /* create new ball and tell the user the number of balls created */
-      else
-      { 
-          
-         addObject(new Ball(), (WIDTH / 2), 222);
-         message.setText("Ball " + numBalls);
-      }
-    }
-  
+    
     /**
      * Method to check if the game is over and if so tell the user
      * and stop the simulation
@@ -129,9 +112,9 @@ public class BreakoutWorld extends World
     
         /* create the paddle */
         addObject(new Paddle(),(WIDTH / 2),HEIGHT - 30);
-    
+              
         /* create a new ball */
-        newBall();
+        addObject(new Ball(), (WIDTH / 2), 222);
   
     }
   
@@ -152,9 +135,8 @@ public class BreakoutWorld extends World
             {
                 addObject(new Brick(colorArray[row]),xPos,yPos);
             }
-        }
-        
-    }
+        } 
+    }   
     
     /**
      * Method to create and set the image for the background 
@@ -166,7 +148,7 @@ public class BreakoutWorld extends World
         image.fillRect(0,0,WIDTH,HEIGHT);
         setBackground(image);
     }
-    
+   
     public int getWidth()
     {
         return WIDTH;
@@ -178,6 +160,7 @@ public class BreakoutWorld extends World
     }
     
    public void pierde(){
+       
        if(contVidas.getValue()==0){
            Label etiquetaFin=new Label("Game Over",50);
           addObject(etiquetaFin,250,250);
