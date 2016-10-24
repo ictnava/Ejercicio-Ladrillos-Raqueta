@@ -28,7 +28,7 @@ public class Ball extends Actor
     private int velX;
     
     /** the amount of change in y during each act */
-    private int velY = 2;
+    private int velY = 4;
     
     ////////////////// constructors /////////////////////
     
@@ -113,6 +113,7 @@ public class Ball extends Actor
         }
         if(isTouching(Brick.class)){
           removeTouching(Brick.class);
+          velY=-1*(velY);
           mundo.checkIfWon();
         }
         if(this.getY()>mundo.getHeight()){
@@ -120,11 +121,6 @@ public class Ball extends Actor
         }
     }
         
-    public void cambiaColor()
-    {
-        if(isTouching(Brick.class)){
-     
-        }
-    }
+    
 }
 
